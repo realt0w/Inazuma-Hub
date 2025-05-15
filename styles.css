@@ -1,0 +1,196 @@
+/* Ensure full height layout */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Allow content to grow but keep footer at bottom */
+main {
+    flex: 1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #88b04b;
+}
+
+header {
+    background: #154abd;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.logo-container img {
+    max-width: 180px;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffcc00;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* News Section */
+.news-container {
+    background: #0000004b;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+/* Title */
+.news-container h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* News Feed Box */
+.news-feed {
+    background: #0000003b;
+    padding: 10px;
+    border-radius: 8px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+/* Individual News Item */
+.news-item {
+    padding: 10px;
+    border-left: 5px solid yellow;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Date */
+.news-item .date {
+    font-weight: bold;
+    color: #ffdd44;
+    font-size: 0.9em;
+}
+
+/* News Text */
+.news-item p {
+    margin: 5px 0 0 10px;
+    color: white;
+}
+
+/* Scrollbar Styling */
+.news-feed::-webkit-scrollbar {
+    width: 8px;
+}
+
+.news-feed::-webkit-scrollbar-thumb {
+    background: yellow;
+    border-radius: 5px;
+}
+
+.news-feed::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* "See more" link styling */
+.news-item .see-more {
+    color: yellow;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.news-item .see-more:hover {
+    text-decoration: underline;
+}
+
+/* Center "Our Projects" Title */
+.projects {
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+/* Project Grid */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;  /* Allows the cards to wrap to the next line */
+    justify-content: center; /* Centers the items horizontally */
+    gap: 20px;  /* Spacing between cards */
+    padding: 20px;
+    color: #000000;
+}
+
+/* Project Card Styling */
+.project-card {
+    background: white;
+    padding: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(33.33% - 40px); /* 3 cards per row by default */
+    min-width: 250px;  /* Ensures it doesn't get too small */
+    max-width: 300px;  /* Prevents it from stretching too much */
+    flex-grow: 1;  /* Allows flexibility */
+    border-radius: 10px;
+}
+
+/* Ensure images resize properly */
+.project-card img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    background: #154abd;
+    color: white;
+    padding-bottom: 10px;
+    width: 100%;
+    position: relative;
+}
+
+
+/* Responsive Adjustments */
+@media screen and (max-width: 800px) {
+    .news-container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .project-card {
+        width: calc(50% - 40px); /* 2 cards per row */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .news-container {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .project-card {
+        width: 100%; /* 1 card per row */
+    }
+}
