@@ -14,7 +14,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #88b04b;
+    background: url("bg_main.webp") no-repeat center center fixed;
+    background-size: cover;
 }
 
 header {
@@ -22,6 +23,21 @@ header {
     text-align: center;
     padding: 10px 0;
 }
+
+.contact-mail a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    background: #00000033;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.contact-mail a:hover {
+    text-decoration: underline;
+}
+
 
 .logo-container img {
     max-width: 180px;
